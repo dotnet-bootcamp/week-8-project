@@ -6,6 +6,7 @@ namespace StringLibrary.Tests
 {
     public class StringLibraryTest
     {
+        
         [Fact]
         public void TestStartsWithUpperWhenNullOrEmpty()
         {
@@ -49,7 +50,7 @@ namespace StringLibrary.Tests
             foreach (var word in words)
             {
                 // Act
-                bool result = word.StartsWithLower();
+                bool result = StringLibrary.StartsWithLower(word);
 
                 // Assert
                 Assert.True(result);
@@ -65,7 +66,7 @@ namespace StringLibrary.Tests
             foreach (var word in words)
             {
                 // Act
-                bool result = word.StartsWithLower();
+                bool result = StringLibrary.StartsWithLower(word);
 
                 // Assert
                 Assert.False(result);
@@ -82,11 +83,12 @@ namespace StringLibrary.Tests
             foreach (var phrase in phrases)
             {
                 // Act
-                bool result = phrase.HasEmbeddedSpaces();
+                bool result = StringLibrary.HasEmbeddedSpaces(phrase);
 
                 // Assert
                 Assert.True(result);
             }
         }
+        
     }
 }
